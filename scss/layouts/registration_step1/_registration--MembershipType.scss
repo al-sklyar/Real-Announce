@@ -1,0 +1,170 @@
+.registration--MembershipType {
+    display: flex;
+}
+
+.registration--MembershipType__women,
+.registration--MembershipType__men {
+    padding-top: 28px;
+}
+
+.registration--MembershipType__women,
+.registration--MembershipType__men {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: -moz-linear-gradient(-45deg,  rgba(201,162,163,0.7) 0%, rgba(201,162,163,0.7) 1%, rgba(80,56,66,0.7) 100%);
+        background: -webkit-linear-gradient(-45deg,  rgba(201,162,163,0.7) 0%,rgba(201,162,163,0.7) 1%,rgba(80,56,66,0.7) 100%);
+        background: linear-gradient(135deg,  rgba(201,162,163,0.7) 0%,rgba(201,162,163,0.7) 1%,rgba(80,56,66,0.7) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6c9a2a3', endColorstr='#e6503842',GradientType=1 );
+        z-index: -1;
+    }
+}
+
+.registration--MembershipType__women {
+    background-image: url('../img/registration_step1/registratio_step1--bgForWomen.jpg');
+}
+
+.registration--MembershipType__men {
+    background-image: url('../img/registration_step1/registratio_step1--bgForMen.jpg');
+}
+
+.registration--MembershipType__women--title,
+.registration--MembershipType__men--title {
+    position: relative;
+    padding-bottom: 18px;
+    margin-bottom: 28px;
+
+    &::before {
+        position: absolute;
+        content: '';
+        left: -32px;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        max-width: 64px;
+        background-color: #fefeff;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        color: #fefeff;
+        font-weight: 600;
+        font-size: 25px;
+        letter-spacing: 1.2px;
+    }
+}
+
+.registration--MembershipType__women--question,
+.registration--MembershipType__men--question {
+    text-transform: uppercase;
+    color: #fefeff;
+    font-weight: 700;
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+.registration--MembershipType__women--text {
+    margin-bottom: 17px;
+}
+
+.registration--MembershipType__men--text {
+    margin-bottom: 47px;
+}
+
+.registration--MembershipType__women--text,
+.registration--MembershipType__men--text {
+    max-width: 460px;
+    color: #fefeff;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 2.1;
+}
+
+.registration--MembershipType__women--list,
+.registration--MembershipType__men--list {
+    padding: 0px;
+    list-style: none;
+
+    & li {
+        font-weight: 700;
+        color: #fefeff;
+        letter-spacing: .9px;
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 25px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: calc(50% - 5px);
+            background-color: #fefeff;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.registration--MembershipType__women--button
+,.registration--MembershipType__men--button {
+    margin-bottom: 38px;
+    margin-top: 83px;
+}
+
+
+// media queries
+
+@media screen and (min-width: 1000px) {
+    .registration--MembershipType__women,
+    .registration--MembershipType__men {
+        width: 50%;
+    }
+
+    .registration--MembershipType__women--container,
+    .registration--MembershipType__men--container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .registration--MembershipType__women--container {
+        margin-left: auto;
+        padding-right: 50px;
+    }
+
+    .registration--MembershipType__women {
+        padding-left: 15px;
+    }
+
+    .registration--MembershipType__men {
+        padding-right: 15px;
+    }
+
+    .registration--MembershipType__men--container {
+        margin-right: auto;
+        padding-left: 50px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .registration--MembershipType {
+        flex-direction: column;
+    }
+
+    .registration--MembershipType__women,
+    .registration--MembershipType__men {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

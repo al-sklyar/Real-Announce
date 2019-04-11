@@ -1,0 +1,126 @@
+.breadCrumbs {
+    background-color: #eadbcf;
+    padding: 16px 0px 16px;
+
+    & ul {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        margin-bottom: 0px;
+        justify-content: center;
+        max-height: 18px;
+    }
+}
+
+.breadCrumbs__item a {
+    color:  #503842;
+    font-family: Philosopher;
+    font-size: 12.5px;
+    font-weight: 700;
+    letter-spacing: .7px;
+    display: inline-block;
+    overflow-x: hidden;
+    text-transform: uppercase;
+    white-space: nowrap;
+    position: relative;
+
+    &:hover {
+        color: #a99191;
+        text-decoration: none;
+
+        &::before {
+            width: calc(100% - 8px);
+        }
+
+        & span:first-child {
+            background-color: #503842;
+            transform: rotate(45deg);
+        }
+
+        & span:last-child {
+            background-color: #503842;
+            transform: rotate(45deg);
+        }
+    }
+
+    & span {
+        transform: rotate(45deg);
+        border: 1px solid #503842;
+        margin-bottom: 0;
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        transition: all .4s;
+
+        &:first-child {
+			margin-right: 8px;
+			margin-left: 2.5px;
+        }
+
+        &:last-child {
+			margin-left: 8px;
+		    margin-right: 0.89px;
+        }
+    }
+}
+
+.breadCrumbs__item:hover a {
+    color: #a99191;
+    text-decoration: none;
+
+    &::before {
+        width: 100%;
+    }
+
+    & span:first-child {
+        background-color: #503842;
+        transform: rotate(45deg);
+    }
+
+    & span:last-child {
+        background-color: #503842;
+        transform: rotate(45deg);
+    }
+}
+
+.breadCrumbs__item:hover + .breadCrumbs__item a {
+
+    & span:first-child {
+        background-color: #503842;
+        transform: rotate(45deg);
+    }
+}
+
+.breadCrumbs__item a::before {
+    background-color: #503842;
+    top: 9px;
+    position: absolute;
+    content: '';
+    left: 10.5px;
+    height: 1px;
+    width: 0;
+    transition: all .4s;
+}
+
+
+.breadCrumbs__item {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.breadCrumbs__item:not(:last-child) a {
+    padding-right: 6px;
+
+    & span {
+        margin-right: 8px;
+        margin-left: 2.5px;
+    }
+}
+
+/* media queries */
+
+@media screen and (max-width: 1000px) {
+    .breadCrumbs {
+        display: none;
+    }
+}

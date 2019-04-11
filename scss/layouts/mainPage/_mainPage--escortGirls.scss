@@ -1,0 +1,169 @@
+.mainPage--escortGirls {
+    background-image: url(../img/mainPage/escortGirls/escortGirls_BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 25px 15px 26px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: -moz-linear-gradient(45deg,  rgba(206,184,183,1) 0%, rgba(206,184,183,0.9) 100%);
+        background: -webkit-linear-gradient(45deg,  rgba(206,184,183,1) 0%,rgba(206,184,183,0.9) 100%);
+        background: linear-gradient(45deg,  rgba(206,184,183,1) 0%,rgba(206,184,183,0.9) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ceb8b7', endColorstr='#e6ceb8b7',GradientType=1 );
+    }
+}
+
+.mainPage--escortGirls__title {
+    color:  #503842;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding-bottom: 26px;
+    margin-bottom: 32px;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        max-width: 64px;
+        height: 2px;
+        background-color: #503842;
+        left: -33px;
+        bottom: 0;
+    }
+}
+
+.mainPage--escortGirls__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #bca6a7;
+    padding-top: 9px;
+    margin-bottom: 23px;
+}
+
+.mainPage--escortGirls__card--city h3 {
+    color:  #503842;
+    font-size: 14.58px;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    & span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        transform: rotate(45deg);
+        border: 1px solid #503842;
+        margin-bottom: 1px;
+        transition: all .4s;
+
+        &:first-child {
+            margin-right: 11px;
+        }
+
+        &:last-child {
+            margin-left: 11px;
+        }
+    }
+}
+
+.mainPage--escortGirls__card--name {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 290px;
+    padding-top: 8px;
+
+    & span {
+        display: inline-block;
+        font-family: Philosopher;
+        color:  #503842;
+        font-size: 16.67px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    & a {
+        display: inline-block;
+        font-family: Montserrat;
+        color:  #503842;
+        font-size: 14.58px;
+        font-weight: 600;
+        min-width: 63px;
+        padding-left: 10px;
+        padding-top: 1px;
+        border-left: 1px solid #b59ea0;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            font-family: "Flaticon";
+            content: "\f100";
+            top: -3px;
+            right: 0px;
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color:  #503842;
+        }
+    }
+}
+
+.mainPage--escortGirls__card--photo {
+    position: relative;
+}
+
+.mainPage--escortGirls__card--photo__hoverBlock--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #c9a2a3;
+}
+
+.mainPage--escortGirls__card--photo__hoverBlock {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background-color: #2b292b;
+    padding: 10px;
+    opacity: 0;
+    transition: .5s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.mainPage--escortGirls__card--photo__hoverBlock--name {
+    font-family: Philosopher;
+    color:  #a57b7c;
+    font-size: 25px;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+}
+
+.mainPage--escortGirls__card--photo__hoverBlock--separator {
+    width: 100%;
+    max-width: 90px;
+    height: 2px;
+    background-color: #c9a2a3;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
