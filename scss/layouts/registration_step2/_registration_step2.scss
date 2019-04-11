@@ -1,26 +1,103 @@
 .registration-area {
-  background-color: #000000;
-  .choose-business {
-    .header-step2 {
-      &::before {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-image: url(../img/registration_step2/bg-girl.png);  
+}
+
+.choose-business, .enter-info {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  max-width: 600px; 
+}
+
+.data-area {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-data, .right-data {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  input {
+    background-color: transparent;
+    width: 266px;
+    height: 40px;
+    border: 1px solid $baseTextCol;
+    padding-left: 4px;
+  }
+  img {
+    margin-top: 10px;
+    width: 266px;
+    height: 66px;
+  }
+  
+}
+
+.header-step2 {
+  &::before {
+    position: absolute;
+    content: "";
+    left: -32px;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    max-width: 64px;
+    background-color: transparent;
+    border-radius: 1px solid $baseTextCol;
+  }
+  &:hover::before {
+    background-color:  $baseTextCol;
+  }
+  h2 {
+    text-transform: uppercase;
+    color: $baseTextCol;
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+  }
+}
+
+.description {
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.gender {
+  position: relative;
+  ul {
+    li {
+      list-style: none;
+      &::before{
         position: absolute;
         content: "";
-        left: -32px;
-        bottom: 0;
-        width: 100%;
-        height: 2px;
-        max-width: 64px;
-        background-color: #fefeff;
+        width: 8px;
+        height: 8px;
+        left: 22px;
+        background-color: $baseTextCol;
+        transform: rotate(45deg);
       }
-      h2{
-        text-transform: uppercase;
+      a {
         color: $baseTextCol;
-        font-weight: 600;
-        font-size: 25px;
-        letter-spacing: 1.2px;
+        &:hover {
+          font-weight: bold;
+        }
       }
-
-
     }
   }
+}
+
+.paragraph {
+  span {
+    font-weight: bold;
+    letter-spacing: 0;
+  }
+}
+
+.terms {
+  font-weight: bold;
+  text-decoration: underline;
 }
