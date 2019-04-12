@@ -101,3 +101,21 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+.sign-up {
+  position: relative;
+  top: 10px;
+  width: 160px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid $baseTextCol;
+  a {
+    position: absolute;
+    color: $baseTextCol;
+    display: block;
+    width: 156px;
+    height: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
