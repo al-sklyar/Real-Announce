@@ -8,37 +8,28 @@
 }
 
 .choose-business, .enter-info {
+  position: relative;
+  top: 28px;
+  left: 19px;
   flex-basis: 50%;
   display: flex;
   flex-direction: column;
-  max-width: 600px; 
-}
+  max-width: 600px;
 
-.data-area {
-  display: flex;
-  flex-direction: row;
-}
-
-.left-data, .right-data {
-  flex-basis: 50%;
-  display: flex;
-  flex-direction: column;
-  input {
-    background-color: transparent;
-    width: 266px;
-    height: 40px;
-    border: 1px solid $baseTextCol;
-    padding-left: 4px;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 2px;
+    background-color: $baseTextCol;
+    transform: translateX(-50%);
+    top: 54px;
   }
-  img {
-    margin-top: 10px;
-    width: 266px;
-    height: 66px;
-  }
-  
 }
 
 .header-step2 {
+
   &::before {
     position: absolute;
     content: "";
@@ -50,9 +41,11 @@
     background-color: transparent;
     border-radius: 1px solid $baseTextCol;
   }
+
   &:hover::before {
     background-color:  $baseTextCol;
   }
+
   h2 {
     text-transform: uppercase;
     color: $baseTextCol;
@@ -68,24 +61,85 @@
   font-weight: bold;
 }
 
+.data-area {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  top: 39px;
+}
+
+.left-data, .right-data {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    position: relative;
+    bottom: 5px;
+    background-color: transparent;
+    width: 266px;
+    height: 40px;
+    border: 1px solid $baseTextCol;
+    padding-left: 4px;    
+  }
+
+  .description {
+
+      &:last-of-type {
+        margin-top: 20px;
+      }
+    }
+
+  img {
+    margin-top: 28px;
+    width: 266px;
+    height: 66px;
+  }
+}
+
+#last-desription {
+  margin-top: 20px;
+}
+
 .gender {
   position: relative;
+  top: 38px;
+
   ul {
+
     li {
       list-style: none;
+      position: relative;
+      bottom: 5px;
+      right: 5px;
+      letter-spacing: 0.9px;
+
+      &:last-of-type {
+        top: 3px;
+        letter-spacing: 0.6px;
+      }
+
       &::before{
         position: absolute;
         content: "";
-        width: 8px;
-        height: 8px;
-        left: 22px;
-        background-color: $baseTextCol;
-        transform: rotate(45deg);
+        width: 14px;
+        height: 14px;
+        top:3px;
+        left: -32px;
+        border: 1px solid $baseTextCol;
+        transform: rotate(45deg);        
       }
+
+      &:hover::before {
+        background-color: $baseTextCol;
+      }
+
       a {
         color: $baseTextCol;
+
         &:hover {
           font-weight: bold;
+          text-decoration: none;
         }
       }
     }
@@ -93,9 +147,19 @@
 }
 
 .paragraph {
+  position: relative;
+  top: 59px;
+  max-width: 505px;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+
+  &:last-of-type {
+    top: 75px;
+  }
+
   span {
     font-weight: bold;
-    letter-spacing: 0;
+    letter-spacing: 1px;
   }
 }
 
@@ -104,17 +168,38 @@
   text-decoration: underline;
 }
 
+#para-terms {
+  position: relative;
+  top: 20px;
+  left: 38px;
+
+  &::before{
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: 21px;
+    left: -35px;
+    border: 1px solid $baseTextCol;
+    transform: rotate(45deg);        
+  }
+
+  &:hover::before {
+    background-color: $baseTextCol;
+  }
+}
+
 .sign-up {
   position: relative;
-  top: 10px;
+  top: 103px;
   width: 160px;
   height: 40px;
   background-color: transparent;
   border: 2px solid $baseTextCol;
-  overflow: hidden;
+  
   a {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;    
     color: $baseTextCol;
     display: block;
@@ -124,25 +209,32 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 36px;
+    overflow: hidden;
+    letter-spacing: -0.5px;
     z-index: 1;
+
     &:hover {
       text-decoration: none;
       color: $bgCol;
-    }    
+    }
+
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      transform: translateX(100%);
+      width: 156px;
+      height: 36px;
+      background-color: $baseTextCol;    
+      transition: all .4s;      
+    }
+
+    &:hover::before {
+      transform: translate(0);
+      z-index: -1; 
+    }
   }
-  &::before{
-    content: "";
-    display: block;
-    transform: translateX(100%);
-    width: 156px;
-    height: 36px;
-    background-color: $baseTextCol;    
-    transition: all .4s;
-  }
-  &:hover::before {
-    // display: block;
-    transform: translate(0);
-  }
+
   &::after {
     content: "";
     display: block;
@@ -152,7 +244,6 @@
     max-width: 390px;
     width: 250%;
     height: 2px;
-
     background-color:  $baseTextCol;
   }
 }
