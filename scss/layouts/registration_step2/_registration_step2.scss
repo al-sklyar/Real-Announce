@@ -1,8 +1,10 @@
 .registration-area {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: center;
-  background-image: url(../img/registration_step2/bg-girl.png);  
+  background-image: url(../img/registration_step2/bg-girl.png);
+  min-height: 525px;
 }
 
 .choose-business, .enter-info {
@@ -109,13 +111,48 @@
   height: 40px;
   background-color: transparent;
   border: 2px solid $baseTextCol;
+  overflow: hidden;
   a {
     position: absolute;
+    top: 0;
+    left: 0;    
     color: $baseTextCol;
     display: block;
     width: 156px;
     height: 36px;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
+    line-height: 36px;
+    z-index: 1;
+    &:hover {
+      text-decoration: none;
+      color: $bgCol;
+    }    
+  }
+  &::before{
+    content: "";
+    display: block;
+    transform: translateX(100%);
+    width: 156px;
+    height: 36px;
+    background-color: $baseTextCol;    
+    transition: all .4s;
+  }
+  &:hover::before {
+    // display: block;
+    transform: translate(0);
+  }
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 158px;
+    top: calc(50% - 1px);
+    max-width: 390px;
+    width: 250%;
+    height: 2px;
+
+    background-color:  $baseTextCol;
   }
 }
