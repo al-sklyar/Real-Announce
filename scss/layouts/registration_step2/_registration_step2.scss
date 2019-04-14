@@ -60,7 +60,6 @@
   }
 }
 
-
 .header-step2 {
 
   &::before {
@@ -92,17 +91,34 @@
   }
 }
 
+.data-area {
+  display: flex;
+  flex-direction: row;
+  margin-top: 35px;
+  justify-content: center;
+  @include max-screen(575px) {
+    display: none;
+  }
+}
+
 .description {
   margin-top: 10px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.data-area {
-  display: flex;
-  flex-direction: row;
-  margin-top: 35px;
-  justify-content: center;
+input {
+  background-color: transparent;
+  max-width: 266px;
+  width: calc(100% - 2px);
+  height: 40px;
+  border: 1px solid $baseTextCol;
+  padding-left: 4px;
+  }
+img {
+  margin-top: 28px;
+  width: 266px;
+  height: 66px;
 }
 
 .datas {
@@ -110,28 +126,29 @@
   display: flex;
   flex-direction: column;
 
-  input {
-    background-color: transparent;
-    max-width: 266px;
-    width: calc(100% - 2px);
-    height: 40px;
-    border: 1px solid $baseTextCol;
-    padding-left: 4px;    
-  }
-
   .description {
 
-      &:last-of-type {
-        margin-top: 20px;
-      }
+    &:last-of-type {
+      margin-top: 20px;
     }
-
-  img {
-    margin-top: 28px;
-    width: 266px;
-    height: 66px;
   }
 }
+
+.mobile-data-area {    
+  display: none;
+  margin-top: 35px;
+
+  @include max-screen(575px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .lines {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 #last-desription {
   margin-top: 20px;
@@ -223,8 +240,6 @@
    @include max-screen(767px) {
      margin-left: 30px;
    }
-
-
   
   &::before{
     position: absolute;
@@ -247,7 +262,6 @@
     @include max-screen(767px) {
       left: -25px;
     }
-
   }
 
   &:hover::before {
@@ -258,10 +272,15 @@
 .sign-up {
   position: relative;
   margin-top: 69px;
+  margin-left: 3px;
   width: 160px;
   height: 40px;
   background-color: transparent;
   border: 2px solid $baseTextCol;
+
+  @include max-screen(767px) {
+    margin-top: 25px;
+  }
   
   a {
     position: absolute;
