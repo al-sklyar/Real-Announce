@@ -2,29 +2,28 @@
   display: flex;
   position: relative;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   background-image: url(../img/registration_step2/bg-girl.png);
-  min-height: 525px;
-  padding: 28px 19px;
+  min-height: 525px;  
+  padding: 28px 20px;
 
   @include max-screen(1199px) {
     justify-content: space-between;
+    padding: 28px 10px;
+  }
+
+  @include max-screen(991px) {
+    flex-direction: column;
+    padding: 28px 20px;
   }
 }
 
-.choose-business, .enter-info {
-  max-width: calc(50% - 4px) !important;
-  position: relative;
-  // margin-top: 28px;
-  // margin-left: 19px;
-  display: flex;
-  flex-direction: column;
+.areas {
   max-width: 600px;
-
-  // @include max-screen(1199px) {
-  //   margin-left: 15px;
-  //   margin-right: 15px;
-  // }
+  width: calc(50% - 4px);
+  position: relative;
+  display: flex;
+  flex-direction: column;  
 
   &::before {
     content: "";
@@ -35,8 +34,32 @@
     background-color: $baseTextCol;
     transform: translateX(-50%);
     top: 54px;
+    @include max-screen(1199px) {
+      transform: translateX(0);
+    }
+  }
+
+  @include max-screen(991px) {
+    max-width: calc(100% - 20px);
+    width: calc(100% - 20px);
   }
 }
+
+.choose-business {
+  margin-left: 0;
+  
+  @include max-screen(1199px) {
+    margin-left: 1%
+  }
+}
+
+.enter-info {
+
+  @include max-screen(991px) {
+   margin-top: 15px;
+  }
+}
+
 
 .header-step2 {
 
@@ -62,6 +85,10 @@
     font-weight: 600;
     font-size: 25px;
     letter-spacing: 1.2px;
+
+    @include max-screen(1199px) {
+      text-align: center;
+    }    
   }
 }
 
@@ -76,29 +103,20 @@
   flex-direction: row;
   margin-top: 35px;
   justify-content: center;
-  // position: relative;
-  // top: 39px;
 }
 
-.left-data, .right-data {  
-  width: calc(50% - 15px);
-  // padding-top: 39px;
+.datas {
+  width: calc(50% - 5px);
   display: flex;
   flex-direction: column;
 
   input {
-    // position: relative;
-    // bottom: 5px;
     background-color: transparent;
     max-width: 266px;
-    width: calc(100% - 5px);
+    width: calc(100% - 2px);
     height: 40px;
     border: 1px solid $baseTextCol;
-    padding-left: 4px;   
-    
-    // @include max-screen(1132px) {
-    //   width: 220px;
-    // }
+    padding-left: 4px;    
   }
 
   .description {
@@ -167,15 +185,19 @@
 .paragraph-wrapper {
   margin-top: 59px;
   max-width: 505px;
+
+  @include max-screen(991px) {
+    max-width: 750px;
+  }
 }
 
 .paragraph-left {  
   letter-spacing: 0.8px;
   line-height: 28px;
 
-  // &:last-of-type {
-  //   top: 75px;
-  // }
+  &:last-of-type {
+    margin-top: 32px;
+  }
 
   span {
     font-weight: bold;
@@ -193,15 +215,17 @@
   margin-top: 30px;
   margin-left: 38px;
   cursor: pointer;
+   @include max-screen(991px) {
+     margin-left: 0;
+     max-width: 320px;
+   }
 
-  // @include max-screen(1250px) {
-  //   max-width: 250px;
-  // }
+   @include max-screen(767px) {
+     margin-left: 30px;
+   }
 
-  // @include max-screen(1132px) {
-  //   max-width: 200px;
-  // }
 
+  
   &::before{
     position: absolute;
     content: "";
@@ -215,6 +239,15 @@
     @include max-screen(1199px) {
       left: -25px;
     }
+
+    @include max-screen(991px) {
+      left: -35px;
+    }
+
+    @include max-screen(767px) {
+      left: -25px;
+    }
+
   }
 
   &:hover::before {
@@ -224,8 +257,7 @@
 
 .sign-up {
   position: relative;
-  margin-top: 30px;
-  margin-left: 15px;
+  margin-top: 69px;
   width: 160px;
   height: 40px;
   background-color: transparent;
@@ -279,9 +311,5 @@
     width: 250%;
     height: 2px;
     background-color:  $baseTextCol;
-
-    // @include max-screen(1199px) {
-    //   width: 200%;
-    // }
   }
 }
