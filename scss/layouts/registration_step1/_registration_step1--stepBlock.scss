@@ -5,7 +5,7 @@
     background-size: cover;
     padding: 26px 15px;
     position: relative;
-    z-index: -2;
+    z-index: 0;                         //changed from "-2" by A.Sklyar 2019-04-15
 
     &::before {
         position: absolute;
@@ -27,7 +27,7 @@
     display: flex;
     margin-bottom: 0px;
     justify-content: space-between;
-    counter-reset: a;
+    counter-reset: a;    
 
     & li {
         color: #a8999d;
@@ -36,26 +36,35 @@
         font-size: 25px;
         letter-spacing: 1.2px;
         list-style-type: none;
-
+        
         &::before {
             counter-increment: a;
             content: '0'counter(a) " | ";
-        }
+        }     
     }
 
     & .registration_step1--stepBlock__list--active {
-        color: #fefeff;
+        color: $hovered;
     }
 }
 
 
 // media queries
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 991px) {             //changed by A.Sklyar 2019-04-15
     .registration_step1--stepBlock__list {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;        
+        width: auto;
+        align-items: start;
+        padding-left: 50% !important;
+        transform: translate(-22%);
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 575px) {             //changed by A.Sklyar 2019-04-15
+    .registration_step1--stepBlock__list {        
+        padding-left: 30% !important;        
     }
 }
 
@@ -64,4 +73,11 @@
     .registration_step1--stepBlock__list li {
         font-size: 20px;
     }
+}
+
+@include max-screen(991px) {
+    width: auto;
+    align-items: start;
+    padding-left: 50%;
+    transform: translate(-22%);
 }
