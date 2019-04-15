@@ -1,21 +1,20 @@
-  .on-hover {    
-    a {
-      text-decoration: none;
-      color: #a8999d;
-      transition: all .1s;
-    }
+.on-hover {    
+  a {
+    text-decoration: none;
+    color: #a8999d;
+    transition: all .1s;
+  }
 
-    &:hover a {
-      text-decoration: none;
-      color: $hovered;
-    }
+  &:hover a {
+    text-decoration: none;
+    color: $hovered;
+  }
     
-    &:hover::before {
-      color: $hovered;
-      transition: all .2s;
-    }      
-  }  
-
+  &:hover::before {
+    color: $hovered;
+    transition: all .2s;
+  }      
+}
 
 .registration-area {
   display: flex;
@@ -28,12 +27,17 @@
 
   @include max-screen(1199px) {
     justify-content: space-between;
-    padding: 28px 10px;
+    padding: 28px 4px;
   }
 
   @include max-screen(991px) {
     flex-direction: column;
     padding: 28px 20px;
+  }
+
+  @include max-screen(345px) {
+    flex-direction: column;
+    padding-right: 2px;
   }
 }
 
@@ -122,6 +126,22 @@ input {
   height: 40px;
   border: 1px solid $baseTextCol;
   padding-left: 4px;
+
+  @include max-screen(1199px) {
+    max-width: calc(100% - 8px);
+  }
+
+  @include max-screen(991px) {
+    max-width: 266px;
+  }
+
+  @include max-screen(767px) {
+    max-width: calc(80% - 5px);
+  }
+
+  @include max-screen(575px) {
+    max-width: 266px;
+  }
 }
 
 .left-data {
@@ -161,6 +181,11 @@ input {
       margin-top: 15px !important;
       margin-bottom: 5px !important;      
     }
+  }
+  img {
+    margin-top: 28px;
+    width: 266px;
+    height: 66px;
   }
 }
 
@@ -252,6 +277,7 @@ input {
   margin-top: 30px;
   margin-left: 38px;
   cursor: pointer;
+
    @include max-screen(991px) {
      margin-left: 0;
      max-width: 320px;
@@ -266,7 +292,7 @@ input {
     content: "";
     width: 14px;
     height: 14px;
-    top: 21px;
+    top: calc(50% - 7px);
     left: -35px;
     border: 1px solid $baseTextCol;
     transform: rotate(45deg);   
@@ -354,5 +380,22 @@ input {
     width: 250%;
     height: 2px;
     background-color:  $baseTextCol;
+
+    @include max-screen(1199px) {
+      width: 200%;
+    }
+
+    @include max-screen(991px) {
+      max-width: 530px;
+      width: 340%;
+    }
+
+    @include max-screen(767px) {
+      width: 240%;
+    }
+
+    @include max-screen(575px) {
+      display: none;
+    }
   }
 }

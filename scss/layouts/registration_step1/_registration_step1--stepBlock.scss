@@ -59,6 +59,10 @@
         padding-left: 50% !important;
         transform: translate(-22%);
         white-space: nowrap;
+
+        li:first-of-type {
+            padding-left: 5px;
+        }
     }
 }
 
