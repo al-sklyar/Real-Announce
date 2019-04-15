@@ -1,19 +1,37 @@
 .registration--MembershipType {
     display: flex;
+
+    @include max-screen(992px) {
+        flex-direction: column;
+    }
+
 }
+
+// .registration--MembershipType__women,
+// .registration--MembershipType__men {
+//     padding-top: 28px;
+// }
 
 .registration--MembershipType__women,
 .registration--MembershipType__men {
+
     padding-top: 28px;
-}
 
-.registration--MembershipType__women,
-.registration--MembershipType__men {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     position: relative;
     z-index: 10;
+
+    @include min-screen(992px) {
+        width: 50%;
+    }
+
+    @include max-screen(992px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
 
     &::before {
         position: absolute;
@@ -32,10 +50,18 @@
 
 .registration--MembershipType__women {
     background-image: url('../img/registration_step1/registratio_step1--bgForWomen.jpg');
+
+    @include min-screen(992px) {
+        padding-left: 15px;
+    }
 }
 
 .registration--MembershipType__men {
     background-image: url('../img/registration_step1/registratio_step1--bgForMen.jpg');
+
+    @include min-screen(992px) {
+        padding-right: 15px;
+    }
 }
 
 .registration--MembershipType__women--title,
@@ -123,48 +149,69 @@
     margin-top: 83px;
 }
 
-
-// media queries
-
-@media screen and (min-width: 1000px) {
-    .registration--MembershipType__women,
-    .registration--MembershipType__men {
-        width: 50%;
-    }
-
-    .registration--MembershipType__women--container,
-    .registration--MembershipType__men--container {
+.registration--MembershipType__women--container,
+.registration--MembershipType__men--container {
+    @include min-screen(992px) {
         width: 100%;
         max-width: 600px;
     }
+}
 
-    .registration--MembershipType__women--container {
+.registration--MembershipType__women--container {
+    @include min-screen(992px) {
         margin-left: auto;
         padding-right: 50px;
     }
+}
 
-    .registration--MembershipType__women {
-        padding-left: 15px;
-    }
-
-    .registration--MembershipType__men {
-        padding-right: 15px;
-    }
-
-    .registration--MembershipType__men--container {
+.registration--MembershipType__men--container {
+    @include min-screen(992px) {
         margin-right: auto;
         padding-left: 50px;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .registration--MembershipType {
-        flex-direction: column;
-    }
+// media queries
 
-    .registration--MembershipType__women,
-    .registration--MembershipType__men {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-}
+// @media screen and (min-width: 1000px) {
+//     .registration--MembershipType__women,
+//     .registration--MembershipType__men {
+//         width: 50%;
+//     }
+
+//     .registration--MembershipType__women--container,
+//     .registration--MembershipType__men--container {
+//         width: 100%;
+//         max-width: 600px;
+//     }
+
+//     .registration--MembershipType__women--container {
+//         margin-left: auto;
+//         padding-right: 50px;
+//     }
+
+//     .registration--MembershipType__women {
+//         padding-left: 15px;
+//     }
+
+//     .registration--MembershipType__men {
+//         padding-right: 15px;
+//     }
+
+//     .registration--MembershipType__men--container {
+//         margin-right: auto;
+//         padding-left: 50px;
+//     }
+// }
+
+// @media screen and (max-width: 1000px) {
+//     .registration--MembershipType {
+//         flex-direction: column;
+//     }
+
+//     .registration--MembershipType__women,
+//     .registration--MembershipType__men {
+//         padding-left: 15px;
+//         padding-right: 15px;
+//     }
+// }

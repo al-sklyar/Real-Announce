@@ -25,12 +25,12 @@
   min-height: 525px;  
   padding: 28px 20px;
 
-  @include max-screen(1199px) {
+  @include max-screen(1200px) {
     justify-content: space-between;
     padding: 28px 4px;
   }
 
-  @include max-screen(991px) {
+  @include max-screen(992px) {
     flex-direction: column;
     padding: 28px 20px;
   }
@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: column;  
 
-  @include max-screen(991px) {
+  @include max-screen(992px) {
     max-width: calc(100% - 20px);
     width: calc(100% - 20px);
   }
@@ -57,14 +57,14 @@
 .choose-business {
   margin-left: 0;
   
-  @include max-screen(1199px) {
+  @include max-screen(1200px) {
     margin-left: 1%
   }
 }
 
 .enter-info {
 
-  @include max-screen(991px) {
+  @include max-screen(992px) {
    margin-top: 15px;
   }
 }
@@ -84,11 +84,11 @@
     transform: translateX(-50%);
     top: calc(100% - 2px);
 
-    @include max-screen(1199px) {
+    @include max-screen(1200px) {
       transform: translateX(0);
     }
 
-    @include max-screen(991px) {
+    @include max-screen(992px) {
       transform: translateX(-50%);
     }
   }
@@ -108,7 +108,7 @@
   margin-top: 35px;
   justify-content: center;
 
-  @include max-screen(575px) {
+  @include max-screen(576px) {
     display: none;
   }
 }
@@ -127,19 +127,19 @@ input {
   border: 1px solid $baseTextCol;
   padding-left: 4px;
 
-  @include max-screen(1199px) {
+  @include max-screen(1200px) {
     max-width: calc(100% - 8px);
   }
 
-  @include max-screen(991px) {
+  @include max-screen(992px) {
     max-width: 266px;
   }
 
-  @include max-screen(767px) {
+  @include max-screen(768px) {
     max-width: calc(80% - 5px);
   }
 
-  @include max-screen(575px) {
+  @include max-screen(576px) {
     max-width: 266px;
   }
 }
@@ -169,7 +169,7 @@ input {
   display: none;
   margin-top: 35px;
 
-  @include max-screen(575px) {
+  @include max-screen(576px) {
     display: flex;
     flex-direction: column;
   }
@@ -193,7 +193,7 @@ input {
 #last-desription {
   margin-top: 20px;
 
-  @include max-screen(575px) {
+  @include max-screen(576px) {
     margin-top: 15px;
     margin-bottom: 5px;
   }
@@ -248,7 +248,7 @@ input {
   margin-top: 59px;
   max-width: 505px;
 
-  @include max-screen(991px) {
+  @include max-screen(992px) {
     max-width: 750px;
   }
 }
@@ -278,12 +278,12 @@ input {
   margin-left: 38px;
   cursor: pointer;
 
-   @include max-screen(991px) {
+   @include max-screen(992px) {
      margin-left: 0;
      max-width: 320px;
    }
 
-   @include max-screen(767px) {
+   @include max-screen(768px) {
      margin-left: 30px;
    }
   
@@ -297,19 +297,19 @@ input {
     border: 1px solid $baseTextCol;
     transform: rotate(45deg);   
     
-    @include max-screen(1199px) {
+    @include max-screen(1200px) {
       left: -25px;
     }
 
-    @include max-screen(991px) {
+    @include max-screen(992px) {
       left: -35px;
     }
 
-    @include max-screen(767px) {
+    @include max-screen(768px) {
       left: -25px;
     }
 
-    @include max-screen(575px) {
+    @include max-screen(576px) {
       top: 14px;
     }
   }
@@ -328,7 +328,7 @@ input {
   background-color: transparent;
   border: 2px solid $baseTextCol;
 
-  @include max-screen(767px) {
+  @include max-screen(768px) {
     margin-top: 25px;
   }
   
@@ -381,20 +381,20 @@ input {
     height: 2px;
     background-color:  $baseTextCol;
 
-    @include max-screen(1199px) {
+    @include max-screen(1200px) {
       width: 200%;
     }
 
-    @include max-screen(991px) {
+    @include max-screen(992px) {
       max-width: 530px;
       width: 340%;
     }
 
-    @include max-screen(767px) {
+    @include max-screen(768px) {
       width: 240%;
     }
 
-    @include max-screen(575px) {
+    @include max-screen(576px) {
       display: none;
     }
   }

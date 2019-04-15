@@ -2,6 +2,10 @@
     background-color: #eadbcf;
     padding: 16px 0px 16px;
 
+    @include max-screen(992px) {        
+        display: none;
+    }
+
     & ul {
         padding-left: 0;
         list-style: none;
@@ -141,8 +145,8 @@
 
 /* media queries */
 
-@media screen and (max-width: 1000px) {
-    .breadCrumbs {
-        display: none;
-    }
-}
+// @media screen and (max-width: 1000px) {
+//     .breadCrumbs {
+//         display: none;
+//     }
+// }
