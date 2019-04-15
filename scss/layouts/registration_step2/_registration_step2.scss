@@ -1,3 +1,5 @@
+
+
 .registration-area {
   display: flex;
   position: relative;
@@ -96,6 +98,7 @@
   flex-direction: row;
   margin-top: 35px;
   justify-content: center;
+
   @include max-screen(575px) {
     display: none;
   }
@@ -114,7 +117,8 @@ input {
   height: 40px;
   border: 1px solid $baseTextCol;
   padding-left: 4px;
-  }
+}
+
 img {
   margin-top: 28px;
   width: 266px;
@@ -146,12 +150,21 @@ img {
   .lines {
     display: flex;
     flex-direction: column;
+    .description { 
+      margin-top: 15px !important;
+      margin-bottom: 5px !important;      
+    }
   }
 }
 
 
 #last-desription {
   margin-top: 20px;
+
+  @include max-screen(575px) {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
 }
 
 .gender {
@@ -261,6 +274,10 @@ img {
 
     @include max-screen(767px) {
       left: -25px;
+    }
+
+    @include max-screen(575px) {
+      top: 14px;
     }
   }
 

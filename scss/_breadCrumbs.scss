@@ -117,6 +117,28 @@
     }
 }
 
+// on this page (just at add class "this page")
+.breadCrumbs__item.this-page {
+    a{
+      color: #a99191;
+          text-decoration: none;
+  
+          &::before {
+              width: calc(100% - 8px);
+          }
+  
+          & span:first-child {
+              background-color: #503842;
+              transform: rotate(45deg);
+          }
+  
+          & span:last-child {
+              background-color: #503842;
+              transform: rotate(45deg);
+          }
+    }
+  }
+
 /* media queries */
 
 @media screen and (max-width: 1000px) {
